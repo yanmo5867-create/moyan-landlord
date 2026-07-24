@@ -8,6 +8,10 @@ jobs:
     - uses: actions/setup-java@v4
       with: { java-version: '17', distribution: 'temurin' }
     - uses: android-actions/setup-android@v3
+    # 新增：手动安装缺失的旧版构建工具 25.0.3
+    - run: sdkmanager "build-tools;25.0.3" "platforms;android-25"
+    - run: echo "ANT_HOME=/usr/share/ant" >> $GITHUB_ENV
+    - run: echo "/usr/share/ant/bin" >> $GITHUB_PATH
     - run: echo "ANDROID_HOME=/usr/local/lib/android/sdk" >> $GITHUB_ENV
     - run: echo "ANDROID_SDK_ROOT=/usr/local/lib/android/sdk" >> $GITHUB_ENV
     - run: ant debug

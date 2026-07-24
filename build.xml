@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="moyan-landlord" default="package" basedir=".">
-    <property name="sdk.dir" value="./local-sdk" />
+<project name="moyan-landlord" default="debug">
+    <property name="sdk.dir" value="/usr/local/lib/android/sdk" />
     <property name="target" value="android-25" />
     <property name="out.dir" value="bin" />
     <property name="apk.name" value="moyan-landlord-debug" />
+    
     <path id="android.classpath">
         <pathelement path="${sdk.dir}/platforms/${target}/android.jar" />
+        <!-- 关键修复：指向新安装的 build-tools 路径 -->
+        <pathelement path="${sdk.dir}/build-tools/25.0.3/lib/ant-tasks.jar" />
     </path>
+
     <target name="clean">
         <delete dir="${out.dir}" />
         <mkdir dir="${out.dir}/classes" />
     </target>
+    
     <target name="compile" depends="clean">
         <javac srcdir="src" destdir="${out.dir}/classes" classpathref="android.classpath" includeantruntime="false" />
     </target>
-    <target name="package" depends="compile">
+    
+    <target name="debug" depends="compile">
+        <!-- 关键修复：指向新安装的 build-tools 路径 -->
         <exec executable="${sdk.dir}/build-tools/25.0.3/aapt">
             <arg value="package" />
             <arg value="-f" />
@@ -27,6 +34,6 @@
             <arg value="-F" />
             <arg value="${out.dir}/${apk.name}.apk" />
         </exec>
-        <echo message="APK生成完成：${out.dir}/${apk.name}.apk" />
+        <echo message="APK 生成完成：${out.dir}/${apk.name}.apk" />
     </target>
 </project>
