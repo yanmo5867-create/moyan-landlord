@@ -1,0 +1,5 @@
+
+rootProject.name = 'moyan-landlord'
+
+include ':app'
+
