@@ -1,18 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="moyan-landlord" default="help">
-    <!-- 关键修复：强制使用本地相对路径，彻底无视云端 SDK 目录结构变化 -->
+<project name="moyan-landlord" default="package" basedir=".">
     <property name="sdk.dir" value="./local-sdk" />
-    
-    <!-- 引入 SDK 库文件 -->
-    <path id="android.library.classpath">
-        <pathelement path="${sdk.dir}/platforms/android-25/android.jar" />
+    <property name="target" value="android-25" />
+    <property name="out.dir" value="bin" />
+    <property name="apk.name" value="moyan-landlord-debug" />
+    <path id="android.classpath">
+        <pathelement path="${sdk.dir}/platforms/${target}/android.jar" />
     </path>
-
-    <target name="debug">
-        <echo message="开始编译 APK..." />
-        <!-- 模拟编译成功，实际项目中需替换为真实构建逻辑 -->
-        <mkdir dir="bin" />
-        <touch file="bin/moyan-landlord-debug.apk" />
-        <echo message="APK 构建完成！" />
+    <target name="clean">
+        <delete dir="${out.dir}" />
+        <mkdir dir="${out.dir}/classes" />
+    </target>
+    <target name="compile" depends="clean">
+        <javac srcdir="src" destdir="${out.dir}/classes" classpathref="android.classpath" includeantruntime="false" />
+    </target>
+    <target name="package" depends="compile">
+        <exec executable="${sdk.dir}/build-tools/25.0.3/aapt">
+            <arg value="package" />
+            <arg value="-f" />
+            <arg value="-M" />
+            <arg value="AndroidManifest.xml" />
+            <arg value="-S" />
+            <arg value="res" />
+            <arg value="-I" />
+            <arg value="${sdk.dir}/platforms/${target}/android.jar" />
+            <arg value="-F" />
+            <arg value="${out.dir}/${apk.name}.apk" />
+        </exec>
+        <echo message="APK生成完成：${out.dir}/${apk.name}.apk" />
     </target>
 </project>
