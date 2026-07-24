@@ -1,0 +1,9 @@
+package com.moyan.landlord.ui;
+import android.app.Activity;
+import android.os.Bundle;
+public class MainActivity extends Activity {
+    @Override protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        System.out.println("Moyan Landlord App Started!");
+    }
+}
