@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/green_dark</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:statusBarColor">#000000</item>
+        <item name="android:navigationBarColor">#000000</item>
+    </style>
+
+    <style name="GameTheme" parent="android:Theme.Material.NoActionBar.Fullscreen">
+        <item name="android:windowBackground">@drawable/bg_table</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:statusBarColor">#000000</item>
+        <item name="android:navigationBarColor">#000000</item>
+    </style>
+
+    <style name="NightTheme" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/bg_night</item>
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+</resources>

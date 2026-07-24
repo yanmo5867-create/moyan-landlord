@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="card_view" type="id"/>
+    <item name="hand_card_container" type="id"/>
+    <item name="play_area" type="id"/>
+    <item name="effect_layer" type="id"/>
+    <item name="tv_multiplier" type="id"/>
+    <item name="tv_timer" type="id"/>
+    <item name="tv_message" type="id"/>
+    <item name="tv_player_hand_count" type="id"/>
+    <item name="tv_left_ai_count" type="id"/>
+    <item name="tv_right_ai_count" type="id"/>
+    <item name="tv_card_counter" type="id"/>
+    <item name="btn_play" type="id"/>
+    <item name="btn_pass" type="id"/>
+    <item name="btn_hint" type="id"/>
+</resources>

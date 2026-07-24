@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="quality_labels">
+        <item>超低</item>
+        <item>低</item>
+        <item>中低</item>
+        <item>中</item>
+        <item>中高</item>
+        <item>高</item>
+        <item>极致</item>
+    </string-array>
+
+    <string-array name="difficulty_names">
+        <item>菜鸟</item>
+        <item>新手</item>
+        <item>入门</item>
+        <item>熟手</item>
+        <item>进阶</item>
+        <item>高手</item>
+        <item>精英</item>
+        <item>大师</item>
+        <item>宗师</item>
+        <item>至尊</item>
+    </string-array>
+
+    <string-array name="rank_names">
+        <item>新手</item>
+        <item>初学</item>
+        <item>入门</item>
+        <item>熟手</item>
+        <item>进阶</item>
+        <item>高手</item>
+        <item>精英</item>
+        <item>大师</item>
+        <item>宗师</item>
+        <item>斗尊</item>
+        <item>斗圣</item>
+        <item>斗神</item>
+        <item>至尊斗帝</item>
+    </string-array>
+</resources>

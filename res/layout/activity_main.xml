@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_main"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <!-- 标题 -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="漠视诺言"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        android:textColor="#FFD700"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- 斗币+段位信息栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="32dp">
+
+        <TextView
+            android:id="@+id/tv_coin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="💰 1000"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_rank"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🏆 新手"
+            android:textSize="18sp"
+            android:textColor="#FFD700"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- 模式按钮区域 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_classic"
+                android:layout_width="280dp"
+                android:layout_height="56dp"
+                android:text="🃏 经典标准场"
+                android:textSize="18sp"
+                android:backgroundTint="#2E7D32"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="12dp"/>
+
+            <Button
+                android:id="@+id/btn_no_shuffle"
+                android:layout_width="280dp"
+                android:layout_height="56dp"
+                android:text="🔥 不洗牌高爆场"
+                android:textSize="18sp"
+                android:backgroundTint="#BF360C"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="12dp"/>
+
+            <Button
+                android:id="@+id/btn_laizi"
+                android:layout_width="280dp"
+                android:layout_height="56dp"
+                android:text="🎲 天地癞子场"
+                android:textSize="18sp"
+                android:backgroundTint="#4A148C"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="12dp"/>
+
+            <Button
+                android:id="@+id/btn_mingpai"
+                android:layout_width="280dp"
+                android:layout_height="56dp"
+                android:text="👁 明牌练技术场"
+                android:textSize="18sp"
+                android:backgroundTint="#01579B"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="12dp"/>
+
+            <Button
+                android:id="@+id/btn_quick"
+                android:layout_width="280dp"
+                android:layout_height="56dp"
+                android:text="⚡ 快速精简对局"
+                android:textSize="18sp"
+                android:backgroundTint="#E65100"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="12dp"/>
+
+            <Button
+                android:id="@+id/btn_fiftyk"
+                android:layout_width="280dp"
+                android:layout_height="56dp"
+                android:text="🎯 五十K模式"
+                android:textSize="18sp"
+                android:backgroundTint="#B71C1C"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="12dp"/>
+
+            <Button
+                android:id="@+id/btn_double_deck"
+                android:layout_width="280dp"
+                android:layout_height="56dp"
+                android:text="🃏🃏 双副牌模式"
+                android:textSize="18sp"
+                android:backgroundTint="#37474F"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="20dp"/>
+
+            <Button
+                android:id="@+id/btn_settings"
+                android:layout_width="280dp"
+                android:layout_height="48dp"
+                android:text="⚙️ 设置"
+                android:textSize="16sp"
+                android:backgroundTint="#455A64"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

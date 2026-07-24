@@ -1,0 +1,91 @@
+=================================================================
+  漠视诺言 - 上传到GitHub并自动打包APK（超简单教程）
+=================================================================
+
+  总共只需4步，每一步都是复制粘贴一行命令！
+
+-----------------------------------------------------------------
+  第1步：在GitHub网页上建一个空仓库
+-----------------------------------------------------------------
+  1. 浏览器打开 https://github.com/new
+  2. Repository name 填：landlord-game
+  3. 选 Public（公开）
+  4. 不要勾选 README（让它空着）
+  5. 点 Create repository
+
+-----------------------------------------------------------------
+  第2步：在Termux里配置Git身份（告诉GitHub你是谁）
+-----------------------------------------------------------------
+  复制这行命令，粘贴到Termux回车：
+
+  git config --global user.name "yanmo5867-create"
+
+  再复制这行回车：
+
+  git config --global user.email "yanmo5867@gmail.com"
+
+-----------------------------------------------------------------
+  第3步：把解压好的代码推送到GitHub
+-----------------------------------------------------------------
+  假设你已经把 moyan_final.zip 下载到手机并解压到了
+  /storage/emulated/0/Download/moyan_final/
+
+  逐行复制下面命令，每行粘贴后回车：
+
+  cd ~/moyan_upload
+  git init
+  git remote add origin git@github.com:yanmo5867-create/landlord-game.git
+  git add .
+  git commit -m "漠视诺言 v1.0 首发"
+  git push -u origin master:main
+
+  （如果push失败说权限问题，就用HTTPS地址：
+   git remote set-url origin https://github.com/yanmo5867-create/landlord-game.git
+   然后再 git push -u origin master:main
+   用户名填 yanmo5867-create，密码填你的GitHub令牌）
+
+-----------------------------------------------------------------
+  第4步：等GitHub自动打包APK
+-----------------------------------------------------------------
+  1. 打开浏览器进 https://github.com/yanmo5867-create/landlord-game
+  2. 点顶部 Actions 标签
+  3. 你会看到一个黄色圆圈在转（正在编译）
+  4. 等5~10分钟，变绿勾后点进去
+  5. 拉到最底下 Artifacts 区域，点 moyan-debug-apk 下载
+
+-----------------------------------------------------------------
+  项目结构说明
+-----------------------------------------------------------------
+  app/src/main/java/com/moyan/
+    MoyanApp.java          = 应用入口（全局管理）
+    StatsManager.java       = 战绩统计
+    audio/
+      AudioManager.java     = 音效+TTS语音播报
+      VibrationManager.java = 振动分级
+    effect/
+      EffectManager.java    = 特效（顺子/飞机/炸弹/王炸）
+    engine/
+      CardEngine.java       = 13种牌型识别
+      GameEngine.java       = 对局核心逻辑
+      AIEngine.java         = 5档AI难度
+      CardCounter.java      = 记牌器
+      CoinRankManager.java  = 斗币+段位
+      SettingsManager.java  = 设置管理
+      RefreshRateManager.java = 高刷适配
+      FiftyKEngine.java     = 五十K模式
+    model/
+      Card.java             = 卡牌数据
+      CardType.java         = 牌型枚举
+    ui/
+      MainActivity.java     = 首页（竖屏）
+      GameActivity.java     = 对局（横屏）
+      SettingsActivity.java = 设置页
+      CardTouchHandler.java = 滑动选牌
+      CardView.java         = 卡牌UI
+
+  包名：com.moyan
+  应用名：漠视诺言
+
+=================================================================
+  就这么简单！有问题看README.md
+=================================================================

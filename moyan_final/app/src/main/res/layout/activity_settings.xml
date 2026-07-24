@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1a1a2e">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置"
+            android:textSize="28sp"
+            android:textColor="#FFD700"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- 帧率设置 -->
+        <TextView
+            android:id="@+id/tvFpsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="帧率: 120Hz"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginBottom="5dp"/>
+        <SeekBar
+            android:id="@+id/seekFps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="3"
+            android:progress="3"
+            android:progressDrawable="@android:drawable/scrubber_horizontal"
+            android:thumb="@android:drawable/scrubber_control_normal"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- 画质设置 -->
+        <TextView
+            android:id="@+id/tvQualityLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="画质: 高"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginBottom="5dp"/>
+        <SeekBar
+            android:id="@+id/seekQuality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="6"
+            android:progress="4"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- 开关们 -->
+        <Switch
+            android:id="@+id/switchCardCounter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="记牌器"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:checked="true"
+            android:layout_marginBottom="15dp"/>
+
+        <Switch
+            android:id="@+id/switchSound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="音效 & 语音播报"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:checked="true"
+            android:layout_marginBottom="15dp"/>
+
+        <Switch
+            android:id="@+id/switchVibration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="振动反馈"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:checked="true"
+            android:layout_marginBottom="30dp"/>
+
+        <!-- 开发者选项 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开发者选项"
+            android:textSize="20sp"
+            android:textColor="#FF5722"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/tvLuckLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="运气值: 50%"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginBottom="5dp"/>
+        <SeekBar
+            android:id="@+id/seekLuck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="50"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- 关于 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关于"
+            android:textSize="20sp"
+            android:textColor="#FFD700"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="漠视诺言 v1.0"
+            android:textColor="#AAAAAA"
+            android:textSize="14sp"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="纯单机离线斗地主"
+            android:textColor="#888888"
+            android:textSize="12sp"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="包名: com.moyan"
+            android:textColor="#666666"
+            android:textSize="11sp"/>
+
+    </LinearLayout>
+</ScrollView>

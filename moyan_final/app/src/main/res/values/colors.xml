@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="table_green_dark">#1a5c3a</color>
+    <color name="table_green_light">#2e7d52</color>
+    <color name="gold">#FFD700</color>
+    <color name="gold_light">#FFECB3</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="card_red">#D32F2F</color>
+    <color name="card_black">#212121</color>
+    <color name="bg_dark">#1a1a2e</color>
+    <color name="bg_darker">#0f0f1a</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_gray">#AAAAAA</color>
+    <color name="btn_green">#2E7D32</color>
+    <color name="btn_red">#D32F2F</color>
+    <color name="btn_blue">#1976D2</card_blue>
+    <color name="btn_gray">#757575</card_gray>
+    <color name="joker_red">#FF1744</color>
+    <color name="joker_black">#212121</color>
+    <color name="bomb_flash">#FFFF00</color>
+</resources>

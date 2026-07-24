@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">漠视诺言</string>
+    <string name="game_title">漠视诺言 - 斗地主</string>
+    <string name="play">出牌</string>
+    <string name="pass">过牌</string>
+    <string name="hint">提示</string>
+    <string name="settings">设置</string>
+    <string name="card_counter">记牌器</string>
+    <string name="fps_30">30Hz</string>
+    <string name="fps_60">60Hz</string>
+    <string name="fps_90">90Hz</string>
+    <string name="fps_120">120Hz</string>
+    <string name="fps_auto">自动</string>
+    <string name="quality_lowest">超低</string>
+    <string name="quality_low">低</string>
+    <string name="quality_medium_low">中低</string>
+    <string name="quality_medium">中</string>
+    <string name="quality_medium_high">中高</string>
+    <string name="quality_high">高</string>
+    <string name="quality_ultra">极致</string>
+</resources>

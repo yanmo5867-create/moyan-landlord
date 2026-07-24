@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 漠视诺言 应用图标 - 剪影风格 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 黑色背景 -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#000000"/>
+            <corners android:radius="12dp"/>
+        </shape>
+    </item>
+    <!-- 金色文字 M -->
+    <item android:gravity="center">
+        <bitmap
+            android:src="@drawable/ic_launcher_foreground"
+            android:gravity="center"/>
+    </item>
+</layer-list>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/game_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_table">
+
+    <!-- 特效层（最底层） -->
+    <FrameLayout
+        android:id="@+id/effect_layer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!-- 主要对局UI -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <!-- 左侧：AI上家信息 -->
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/ic_ai_avatar"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tv_top_player"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AI 上家"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_top_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="手牌: 17"
+                android:textColor="#FFD700"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp"/>
+
+            <!-- AI上家手牌背 -->
+            <LinearLayout
+                android:id="@+id/ll_top_cards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"/>
+        </LinearLayout>
+
+        <!-- 中间：出牌区 + 信息 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- 信息栏 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tv_info"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="游戏开始"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/tv_multiplier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="倍数: x1"
+                    android:textColor="#FFD700"
+                    android:textSize="16sp"
+                    android:layout_marginStart="12dp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tv_timer"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:text="20"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:gravity="center"
+                    android:background="@drawable/bg_timer"
+                    android:layout_marginStart="12dp"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <!-- 出牌展示区 -->
+            <LinearLayout
+                android:id="@+id/ll_play_area"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@drawable/bg_play_area"
+                android:padding="8dp"/>
+
+            <!-- 底部操作按钮 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="12dp">
+
+                <Button
+                    android:id="@+id/btn_pass"
+                    android:layout_width="100dp"
+                    android:layout_height="48dp"
+                    android:text="过牌"
+                    android:textSize="16sp"
+                    android:backgroundTint="#455A64"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginEnd="16dp"/>
+
+                <Button
+                    android:id="@+id/btn_hint"
+                    android:layout_width="100dp"
+                    android:layout_height="48dp"
+                    android:text="提示"
+                    android:textSize="16sp"
+                    android:backgroundTint="#1565C0"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginEnd="16dp"/>
+
+                <Button
+                    android:id="@+id/btn_play"
+                    android:layout_width="100dp"
+                    android:layout_height="48dp"
+                    android:text="出牌"
+                    android:textSize="16sp"
+                    android:backgroundTint="#2E7D32"
+                    android:textColor="#FFFFFF"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 右侧：AI下家信息 + 记牌器 -->
+        <LinearLayout
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/ic_ai_avatar"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tv_bottom_player"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AI 下家"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_bottom_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="手牌: 17"
+                android:textColor="#FFD700"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp"/>
+
+            <!-- AI下家手牌背 -->
+            <LinearLayout
+                android:id="@+id/ll_bottom_cards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"/>
+
+            <!-- 记牌器 -->
+            <LinearLayout
+                android:id="@+id/ll_card_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_card_counter"
+                android:padding="8dp"
+                android:layout_marginTop="16dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="记牌器"
+                    android:textColor="#FFD700"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="4dp"/>
+
+                <!-- 记牌器内容由代码动态填充 -->
+                <TextView
+                    android:id="@+id/tv_counter_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="11sp"
+                    android:text="等待发牌..."/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 底部：我的手牌滑动区 -->
+    <HorizontalScrollView
+        android:id="@+id/sv_my_hand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#1B5E20"
+        android:padding="4dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/ll_my_hand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="bottom"/>
+    </HorizontalScrollView>
+
+</FrameLayout>

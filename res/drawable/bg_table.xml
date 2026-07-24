@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 深色桌布 -->
+    <item>
+        <shape>
+            <gradient
+                android:angle="135"
+                android:startColor="#1B5E20"
+                android:centerColor="#2E7D32"
+                android:endColor="#1B5E20"/>
+            <corners android:radius="0dp"/>
+        </shape>
+    </item>
+    <!-- 绿色桌布纹理 -->
+    <item android:top="60dp" android:bottom="160dp" android:left="40dp" android:right="40dp">
+        <shape>
+            <stroke android:width="2dp" android:color="#43A047"/>
+            <corners android:radius="12dp"/>
+            <solid android:color="#00000000"/>
+        </shape>
+    </item>
+</layer-list>

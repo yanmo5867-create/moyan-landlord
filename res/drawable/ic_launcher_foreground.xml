@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 漠视诺言 图标前景 - 金色M字母 on 黑色 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 黑色背景 -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M0,0h108v108h-108z"/>
+
+    <!-- 金色 M 字母 -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M24,80 L24,28 L36,28 L54,56 L72,28 L84,28 L84,80 L74,80 L74,42 L56,70 L52,70 L34,42 L34,80 Z"/>
+
+    <!-- 装饰性弧线 -->
+    <path
+        android:strokeColor="#FFD700"
+        android:strokeWidth="1.5"
+        android:fillColor="#00000000"
+        android:pathData="M20,86 Q54,92 88,86"/>
+</vector>
